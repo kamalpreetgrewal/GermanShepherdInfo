@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.guestaccount.germanshepherd">
+          package="com.example.guestaccount.germanshepherd">
 
     <application
         android:allowBackup="true"
@@ -11,12 +11,22 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Launcher">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity"
+            android:label="@string/title"/>
+        <activity android:name=".InfoActivity1"
+                  android:label="@string/title_info_activity1">
+        </activity>
+        <activity android:name=".InfoActivity2"
+                  android:label="@string/title_info_activity2">
+        </activity>
+        <activity android:name=".InfoActivity3"
+                  android:label="@string/title_info_activity3">
+        </activity>
     </application>
 
 </manifest>

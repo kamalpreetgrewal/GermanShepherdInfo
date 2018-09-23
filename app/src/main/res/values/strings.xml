@@ -1,4 +1,18 @@
 <resources>
-    <string name="app_name">GermanShepherd</string>
+    <string name="app_name">KamalpreetGrewal-H00017681</string>
+    <string name="title">German Shepherd</string>
     <string name="information">Information</string>
+    <string name="title_info_activity1">Black German Shepherd</string>
+    <string name="title_info_activity2">Black &amp; Tan German Shepherd</string>
+    <string name="title_info_activity3">White German Shepherd</string>
+    <string name="text_info_activity1">Black is the most recessive of the acceptable German
+        Shepherd colors. They are found in German and European working lines, American showlines
+        and are not found in West German show lines.</string>
+    <string name="text_info_activity2">This is the most common color in the breed. These dogs
+        are born darker and lighten as they mature. The black color recedes and the tan will
+        become prominent. They are found in various working lines.</string>
+    <string name="text_info_activity3">The white color is actually an absence of color. It is
+        called a masking gene, the true genetic color is masked making the dog appear white.
+        It is also known as White Swiss Shepherd, Berger Blanc Swiss dog or the American-Canadian
+        White Shepherd.</string>
 </resources>
