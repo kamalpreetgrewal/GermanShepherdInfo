@@ -31,6 +31,17 @@ public class GestureInterface extends AppCompatActivity implements  GestureDetec
         return super.onTouchEvent(event);
     }
 
+    /**
+     * This method helps to identify the direction of swipe. The path swiped across one of the axes
+     * is compared with the path swiped across the other to identify where motion is more. For instance
+     * if the motion is a little slanting, the behavior of swipe is ambiguous, hence the comparison
+     * is done.
+     * @param motionEvent1
+     * @param motionEvent2
+     * @param velocityX
+     * @param velocityY
+     * @return
+     */
     @Override
     public boolean onFling(MotionEvent motionEvent1, MotionEvent motionEvent2,
                            float velocityX, float velocityY) {
@@ -98,12 +109,18 @@ public class GestureInterface extends AppCompatActivity implements  GestureDetec
         return false;
     }
 
+    /**
+     * These methods are overridden in specific activities for navigation.
+     */
     public void nextActivity() {
     }
 
     public void prevActivity() {
     }
 
+    /**
+     * This method takes the user to home activity when swiped bottom to up.
+     */
     public void homeActivity() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

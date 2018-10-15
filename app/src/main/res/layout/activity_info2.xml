@@ -21,6 +21,7 @@
         android:adjustViewBounds="true"
         app:srcCompat="@drawable/tan_black_german_shepherd"/>
 
+    <!--The textview is invisible by default.-->
     <TextView
         android:id="@+id/black_tan_shepherd_info"
         android:layout_width="match_parent"
@@ -37,6 +38,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/black_tan_shepherd"
-        app:layout_constraintVertical_bias="0.254"/>
+        app:layout_constraintVertical_bias="0.254"
+        android:visibility="invisible"/>
 
 </android.support.constraint.ConstraintLayout>
