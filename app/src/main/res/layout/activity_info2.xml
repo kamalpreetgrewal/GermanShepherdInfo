@@ -39,38 +39,4 @@
         app:layout_constraintTop_toBottomOf="@+id/black_tan_shepherd"
         app:layout_constraintVertical_bias="0.254"/>
 
-    <Button
-        android:id="@+id/prev_button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginLeft="36dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="8dp"
-        android:text="Prev"
-        android:textColor="@android:color/background_light"
-        android:backgroundTint="@android:color/background_dark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/black_tan_shepherd_info"/>
-
-    <Button
-        android:id="@+id/next_button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Next"
-        android:textColor="@android:color/background_light"
-        android:backgroundTint="@android:color/background_dark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.812"
-        app:layout_constraintStart_toEndOf="@+id/prev_button2"
-        app:layout_constraintTop_toBottomOf="@+id/black_tan_shepherd_info"/>
-
 </android.support.constraint.ConstraintLayout>
