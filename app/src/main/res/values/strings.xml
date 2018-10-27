@@ -15,4 +15,7 @@
         called a masking gene, the true genetic color is masked making the dog appear white.
         It is also known as White Swiss Shepherd, Berger Blanc Swiss dog or the American-Canadian
         White Shepherd.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="default_fragment">Types of German Shepherd</string>
 </resources>

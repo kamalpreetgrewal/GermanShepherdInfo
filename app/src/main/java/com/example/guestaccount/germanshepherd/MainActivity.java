@@ -1,106 +1,67 @@
 package com.example.guestaccount.germanshepherd;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        /**
+         * Create a default fragment first and set the layout of the activity. This fragment is
+         * changed depending on the button clicked or on navigation between the info fragments.
+         */
+        final FragmentManager fragmentManager = getSupportFragmentManager();
+        Fragment fragment = new DefaultFragment();
+        fragmentManager.beginTransaction().replace(R.id.info_fragment, fragment).commit();
         setContentView(R.layout.activity_main);
+
+        Toast.makeText(MainActivity.this, "Swipe from bottom to top in the image when it shows to go " +
+                "to main screen.", Toast.LENGTH_LONG).show();
 
         /**
          * Fetch views from layout file and initialise the variables with these views.
          */
-        Button info1 = (Button) findViewById(R.id.button);
-        Button info2 = (Button) findViewById(R.id.button2);
-        Button info3 = (Button) findViewById(R.id.button3);
+        Button info1 = findViewById(R.id.button);
+        Button info2 = findViewById(R.id.button2);
+        Button info3 = findViewById(R.id.button3);
 
         /**
-         * Show image for first type on clicking the button. Set the visibility of description to
-         * invisible and only show the image. So on for the other buttons.
+         * Show the fragment 1 on clicking first button.
          */
         info1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, InfoActivity1.class);
-                intent.putExtra("image", true);
-                intent.putExtra("description", false);
-                startActivity(intent);
+                Fragment fragment = new InfoFragment1();
+                fragmentManager.beginTransaction().replace(R.id.info_fragment, fragment).commit();
             }
         });
 
         /**
-         * Show description for first type on clicking the button. Set the visibility of image to
-         * invisible and only show the text. So on for long clicks for the other buttons.
-         */
-        info1.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                Intent intent = new Intent(MainActivity.this, InfoActivity1.class);
-                intent.putExtra("image", false);
-                intent.putExtra("description", true);
-                startActivity(intent);
-                return true;
-            }
-        });
-
-        /**
-         * Show image for first type on clicking the button.
+         * Show fragment 2 on clicking this button.
          */
         info2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, InfoActivity2.class);
-                intent.putExtra("image", true);
-                intent.putExtra("description", false);
-                startActivity(intent);
+                Fragment fragment = new InfoFragment2();
+                fragmentManager.beginTransaction().replace(R.id.info_fragment, fragment).commit();
             }
         });
 
         /**
-         * Show description for second type on clicking the button.
-         */
-        info2.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                Intent intent = new Intent(MainActivity.this, InfoActivity2.class);
-                intent.putExtra("image", false);
-                intent.putExtra("description", true);
-                startActivity(intent);
-                return true;
-            }
-        });
-
-        /**
-         * Show image for third type on clicking the button.
+         * Show image for fragment 2 on clicking this button.
          */
         info3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, InfoActivity3.class);
-                intent.putExtra("image", true);
-                intent.putExtra("description", false);
-                startActivity(intent);
-            }
-        });
-
-        /**
-         * Show description for the third type on clicking the button.
-         */
-        info3.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                Intent intent = new Intent(MainActivity.this, InfoActivity3.class);
-                intent.putExtra("image", false);
-                intent.putExtra("description", true);
-                startActivity(intent);
-                return true;
+                Fragment fragment = new InfoFragment3();
+                fragmentManager.beginTransaction().replace(R.id.info_fragment, fragment).commit();
             }
         });
     }
